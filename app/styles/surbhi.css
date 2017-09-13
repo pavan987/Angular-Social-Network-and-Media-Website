@@ -1,0 +1,47 @@
+.form-control {
+  display: block;
+  width: 70%;
+  height: 34px;
+  font-size: 14px;
+  line-height: 6.428571;
+  margin-left: 14%;
+}
+
+.login-container {
+  width: 50em;
+  height: auto;
+  border: 1px solid #888888;
+  margin-top: 6%;
+  border-radius: 1px;
+  box-shadow: 10px 10px 5px #888888;
+  padding-bottom: 3em;
+  margin-left: 20%;
+}
+
+#profile {
+  width: 6em;
+  height: 4em;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+#inputfield-username {
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-top: 2em;
+}
+
+#inputfield-email {
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-top: 1em;
+}
+
+#sign-up-div {
+  width: 10em;
+  height: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+

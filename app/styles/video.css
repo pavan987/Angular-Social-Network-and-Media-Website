@@ -1,0 +1,19 @@
+.video-container {
+  float: left;
+  width: 23em;
+  height: 15em;
+  border: 1px solid #333;
+  margin-left: 2em;
+  margin-top: 4em;
+}
+
+
+.picture{
+  width: 23em;
+  height: 15em;
+}
+
+.typeText{
+  margin-left: 6em;
+  margin-top: 1em;
+}

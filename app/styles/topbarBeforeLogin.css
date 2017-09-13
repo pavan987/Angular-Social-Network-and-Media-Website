@@ -1,0 +1,31 @@
+/*#img-responsive {*/
+  /*height: auto;*/
+  /*width: auto;*/
+  /*max-height: 64px;*/
+  /*max-width: 64px;*/
+  /*margin: 10% 0 0 10% ;*/
+/*}*/
+
+.transparent {
+  /*background-color: transparent !important;*/
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12), 0 0 0 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.example-button-row {
+  display: flex;
+  align-items: right;
+  justify-content: space-around;
+}
+
+.ex {
+  margin-left:auto; margin-right:0;
+}
+.btn {
+  background-color: #a8a4a4;
+  color: white;
+  /*float: right;*/
+  /*margin:;*/
+}
+
+

@@ -1,0 +1,82 @@
+<div ng-controller="FriendCtrl">
+<div id = completeForm>
+  <div class="row">
+    <form class="navbar-form" role="search">
+      <div class="col-lg-6 col-md-6 col-xs-push-2 col-xs-8">
+        <input class="friend-form-control" type="text" placeholder = "search friend.." ng-model = "searchData" style = "margin-left:-6em; width:40em;">
+      </div>
+      <div class="col-lg-6 col-md-6 col-xs-push-1 col-xs-8">
+        <button class="btn btn-primary col-xs-push-3 col-xs-4" type="button" ng-click="searchFriends()">
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="friend-container">
+    <div class="well" ><h4> Notifications</h4></div>
+
+
+    <div ng-repeat="user in requests">
+      <div class="searchitem" >
+        <div class="img-circle img-responsive"><a href = "/#!/welcome?username={{user.username}}"><img  ng-src = "{{imageurl}}/{{user.username}}"   alt="Responsive image" id="profile" /></a></div>
+        <div class="searchDescdiv">
+          <a href = "/#!/welcome?username={{user.username}}">
+            <div class="searchDesc">{{user.firstname}} {{user.lastname}}</div>
+            <div class="searchDesc">{{user.username}}</div>
+          </a>
+        </div>
+        <span class="btn btn-default ignore" ng-click="acceptRequest(user.username)">Accept </span>
+        <span class="btn btn-default ignore" ng-click="ignoreRequest(user.username)">Ignore </span>
+
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="friend-container">
+
+    <div class="well"><h4>Search Results</h4></div>
+
+    <div ng-repeat="user in results">
+      <div class="searchitem" >
+        <div class="img-circle img-responsive"><a href = "/#!/welcome?username={{user.username}}"><img ng-src = "{{imageurl}}/{{user.username}}"   alt="Responsive image" id="profile" /></a></div>
+        <div class="searchDescdiv">
+          <a href = "/#!/welcome?username={{user.username}}">
+          <div class="searchDesc">{{user.firstname}} {{user.lastname}}</div>
+          <div class="searchDesc">{{user.username}}</div>
+          </a>
+        </div>
+     </div>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="friend-container">
+      <div class="well" ><h4> Friends </h4></div>
+      <div ng-repeat="user in friends">
+        <div class="searchitem" >
+          <div class="img-circle img-responsive"><a href = "/#!/welcome?username={{user.username}}"><img ng-src = "{{imageurl}}/{{user.username}}"  alt="Responsive image" id="profile" /></a></div>
+          <div class="searchDescdiv">
+            <a href = "/#!/welcome?username={{user.username}}">
+              <div class="searchDesc">{{user.firstname}} {{user.lastname}}</div>
+              <div class="searchDesc">{{user.username}}</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>

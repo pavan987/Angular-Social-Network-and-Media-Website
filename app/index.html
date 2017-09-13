@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <base href="/">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <!--<link rel="stylesheet" href="styles/main.css">-->
+    <link rel="stylesheet" href="styles/homeBeforeLogin.css">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/video.css">
+
+    <!--<link rel="stylesheet" href="styles/login.css">-->
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="styles/topbarAfterLogin.css">
+    <link rel="stylesheet" href="styles/topbarBeforeLogin.css">
+
+    <!--<link rel="stylesheet" href="styles/upload.css">-->
+    <!--Google VRView-->
+    <script src="//storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.0-rc.17.min.js"></script>
+    <script src='https://content.jwplatform.com/libraries/V2m7IN0k.js'></script>
+
+    <link rel="stylesheet" href="styles/upload.css">
+    <link rel="stylesheet" href="styles/friend.css">
+    <link rel="stylesheet" href="styles/editProfile.css">
+
+
+
+
+
+    <!-- endbuild -->
+  </head>
+  <body ng-app="istarVrWebSiteApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!--<div class="header">-->
+      <!--<div class="navbar navbar-default" role="navigation">-->
+        <!--<div class="container">-->
+          <!--<div class="navbar-header">-->
+
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">-->
+              <!--<span class="sr-only">Toggle navigation</span>-->
+              <!--<span class="icon-bar"></span>-->
+              <!--<span class="icon-bar"></span>-->
+              <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+
+            <!--<a class="navbar-brand" href="#/">istarVrWebSite</a>-->
+          <!--</div>-->
+
+          <!--<div class="collapse navbar-collapse" id="js-navbar-collapse">-->
+
+            <!--<ul class="nav navbar-nav">-->
+              <!--<li class="active"><a href="#/">Home</a></li>-->
+              <!--<li><a ng-href="#/about">About</a></li>-->
+              <!--<li><a ng-href="#/">Contact</a></li>-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <div ng-controller="TopbarafterloginCtrl">
+      <div ng-include="templateUrl"></div>
+
+    </div>
+
+
+    <div class="container">
+    <div ng-view="">
+
+
+    </div>
+
+    </div>
+
+    <!--<div class="footer">-->
+      <!--<div class="container">-->
+        <!--<p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>-->
+      <!--</div>-->
+    <!--</div>-->
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <!--<script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>-->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.js"></script>
+    <script src="bower_components/aws-sdk/dist/aws-sdk.js"></script>
+    <script src="bower_components/ng-jwplayer/jwplayer.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/myroute.js"></script>
+        <script src="scripts/controllers/editprofile.js"></script>
+        <script src="scripts/controllers/homebeforelogin.js"></script>
+        <script src="scripts/controllers/homepage.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/profile.js"></script>
+        <script src="scripts/controllers/signup.js"></script>
+        <script src="scripts/controllers/topbarafterlogin.js"></script>
+        <script src="scripts/controllers/topbarbeforelogin.js"></script>
+        <script src="scripts/controllers/upload.js"></script>
+        <script src="scripts/services/oauthservice.js"></script>
+        <script src="scripts/services/oauthbearerservice.js"></script>
+        <script src="scripts/controllers/player360Video.js"></script>
+        <script src="scripts/controllers/player3DModel.js"></script>
+
+    <script src="scripts/controllers/surbhi.js"></script>
+        <script src="scripts/controllers/welcome.js"></script>
+        <script src="scripts/controllers/friend.js"></script>
+        <script src="scripts/controllers/logout.js"></script>
+        <script src="scripts/controllers/videos.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

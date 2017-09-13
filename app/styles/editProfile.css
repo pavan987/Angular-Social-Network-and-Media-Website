@@ -1,0 +1,17 @@
+#imgHead {
+  height: auto;
+  width: auto;
+  max-height: 90px;
+  max-width: 90px;
+}
+
+.editprofile_form {
+  width: 50%;
+  float:right;
+}
+
+.form-group{
+  margin-bottom: 30px;
+}
+
+

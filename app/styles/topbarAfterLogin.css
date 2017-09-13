@@ -1,0 +1,22 @@
+#img-responsive {
+  height: auto;
+  width: auto;
+  max-height: 40px;
+  max-width: 40px;
+  margin: 0 0 0 0;
+  /*margin-top: 10%;*/
+  /*margin-right: 0;*/
+  /*margin-bottom: 0;*/
+  /*margin-left: 0;*/
+}
+#img-responsive2 {
+  height: auto;
+  width: auto;
+  max-height: 64px;
+  max-width: 64px;
+  margin: 3% 0 0 0 ;
+}
+
+#imgHead {
+  box-sizing: content-box;
+}

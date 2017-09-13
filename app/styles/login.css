@@ -1,0 +1,65 @@
+.login-container {
+  width: 50em;
+  height: auto;
+  border: 1px solid #888888;
+  margin-top: 10%;
+  border-radius: 1px;
+  box-shadow: 10px 10px 5px #888888;
+  padding-bottom: 3em;
+}
+
+#logo {
+  width: 12em;
+  height: 9em;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#inputfield-username {
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-top: 2em;
+}
+
+#inputfield-email {
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-top: 1em;
+}
+
+#sign-up-div {
+  width: 10em;
+  height: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+
+
+
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

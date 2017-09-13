@@ -1,0 +1,56 @@
+
+
+#profileInfo {
+  background-color: #e7e7e7;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+
+}
+
+#navigationBar{
+  background-color: #283e4a;
+  margin-bottom: 0px;
+
+}
+
+#friend{
+  background-color: black;
+  color: white;
+  margin-top:0.5em;
+  border-color: black;
+}
+
+#notification{
+  background-color: black;
+  color: white;
+  margin-top:0.5em;
+  border-color: black;
+}
+
+#displayPicture{
+  height: auto;
+  width: auto;
+  max-height: 9em;
+  max-width: 9em;
+
+}
+
+#likes{
+  background-color: red;
+  color: white;
+  margin-top:0.5em;
+}
+
+#videos{
+  background-color: black;
+  color: white;
+  margin-top:0.5em;
+}
+
+#clothes{
+  background-color: black;
+  color: white;
+  margin-top:0.5em;
+}

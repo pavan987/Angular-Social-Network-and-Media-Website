@@ -1,0 +1,69 @@
+<div class="container" ng-controller="ProfileCtrl">
+  <div class=" panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <img class="img-circle" ng-src="{{profilePicture}}" width="100px" height="100px">
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <h5>{{fullname}}</h5>
+          <h5>{{username}}</h5>
+          <a href="#!/profile/editProfile" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span>Edit Profile</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <table class="table">
+        <tr>
+          <td>Firstname</td>
+          <td>{{firstname}}</td>
+        </tr>
+        <tr>
+          <td>Lastname</td>
+          <td>{{lastname}}</td>
+        </tr>
+        <tr>
+          <td>Account Type</td>
+          <td>{{accountType}}</td>
+        </tr>
+        <tr>
+          <td>Domain</td>
+          <td>{{category}}</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>{{email}}</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>{{phone}}</td>
+        </tr>
+        <tr>
+          <td>Birthday</td>
+          <td>{{birthday}}</td>
+        </tr>
+        <tr>
+          <td>Occupation</td>
+          <td>{{occupation}}</td>
+        </tr>
+        <tr>
+          <td>Country</td>
+          <td>{{country}}</td>
+        </tr>
+        <tr>
+          <td>Area</td>
+          <td>{{area}}</td>
+        </tr>
+        <tr>
+          <td>Project</td>
+          <td>{{project}}</td>
+        </tr>
+        <tr>
+          <td>Introduction</td>
+          <td>{{introduction}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+

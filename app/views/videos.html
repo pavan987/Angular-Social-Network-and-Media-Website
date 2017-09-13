@@ -1,0 +1,12 @@
+<div ng-controller="VideosCtrl">
+  <div ng-repeat="video in myvideos">
+
+  <div class="video-container " >
+    <a href="/#!/player360Video?bucketName={{video.bucket}}&key={{video.key}}"><img ng-src = "{{video.thumbnailLocation}}"  class = "picture" alt="Responsive image"/>
+    <label> {{video.nameOfFile}} </label></a>
+  </div>
+
+
+</div>
+</div>
+

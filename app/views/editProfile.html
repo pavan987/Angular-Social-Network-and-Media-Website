@@ -1,0 +1,103 @@
+<div class="container" ng-controller="EditprofileCtrl">
+  <div class=" panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <img class="img-circle" ng-src="{{profilePicture}}" width="100px" height="100px">
+          <label class="btn btn-default btn-file">
+          Update Picture
+          <input style="display: none" type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+          </label>
+
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <h5>{{fullname}}</h5>
+          <h5>{{username}}</h5>
+          <p class="btn btn-default" ng-click="submitForm()" ><span class="glyphicon glyphicon-saved"></span>Save Edit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-body">
+      <form>
+
+        <div  class="col-md-6 col-xs-12" style="width: 80%">
+
+          <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-control editprofile_form" ng-model="firstname">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control editprofile_form" ng-model="lastname">
+          </div>
+          <div class="form-group">
+            <label>Account Type</label>
+            <select class="form-control" style="float: right; width: 25%;"  ng-model="category">
+              <option value="Other">Other</option>
+              <option value="Film Studio">Film Studio</option>
+              <option value="Celebrity Agency">Celebrity Agency</option>
+              <option value="Animation Studio">Animation Studio</option>
+              <option value="Education">Education</option>
+              <option value="Game Studio">Game Studio</option>
+              <option value="3D Design Agency">3D Design Agency</option>
+              <option value="Sports">Sports</option>
+              <option value="Concerts">Concerts</option>
+              <option value="Fashion">Fashion</option>
+              <option value="Travel">Travel</option>
+              <option value="Non-Profit Agency">Non-Profit Agency</option>
+            </select>
+            <select class="form-control" style="float: right; width: 25%; margin-right: 0.4em;" ng-model="accountType" >
+              <option value="Personal">Personal</option>
+              <option value="Company">Company</option>
+            </select>
+
+          </div>
+          <div class="form-group">
+          <label>Email address</label>
+          <input type="email" class="form-control editprofile_form"  ng-model="email" placeholder="Email">
+        </div>
+          <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control editprofile_form"  ng-model="password" placeholder="Password">
+        </div>
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" class="form-control editprofile_form"  ng-model="confirmpassword" placeholder="Confirm Password">
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="text" class="form-control editprofile_form"  ng-model="phone" placeholder="Phone">
+          </div>
+          <div class="form-group">
+            <label>Birthday</label>
+            <input type="text" class="form-control editprofile_form"  ng-model="birthday" placeholder="mm/dd/yyyy">
+          </div>
+          <div class="form-group">
+            <label>Occupation</label>
+            <input type="text" class="form-control editprofile_form"  ng-model="occupation">
+          </div>
+          <div class="form-group">
+            <label>Country</label>
+            <input type="text" class="form-control editprofile_form"  ng-model="country">
+          </div>
+          <div class="form-group">
+            <label>Area</label>
+            <input type="text" class="form-control editprofile_form"  ng-model="area">
+          </div>
+          <div class="form-group">
+            <label>Project</label>
+            <input type="text" class="form-control editprofile_form"  ng-model="project">
+          </div>
+          <div class="form-group">
+            <label>Introduction</label>
+            <input type="text" class="form-control editprofile_form"  ng-model="introduction">
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

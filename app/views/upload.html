@@ -1,0 +1,130 @@
+<head>
+  <link rel="stylesheet" href="../styles/upload.css">
+</head>
+
+<div class="container-fluid" ng-controller="UploadCtrl" >
+  <div class="row">
+    <div class="upload-container">
+      <div style=" width:100%; text-align:center; padding-top:1em;">
+        <span style="font-size:16px;"><b>Upload Your Amazing Content!!</b></span>
+      </div>
+      <form name="uploadForm" novalidate>
+        <div class="input-group" id="inputfield-name">
+          <span class="input-group-addon"><b>Name </b></span>
+          <input type="text" name="name" ng-model="name" class="form-control" placeholder="Enter name of file*" aria-describedby="basic-addon1" required>
+        </div>
+        <p style="color:red; " ng-if="uploadForm.name.$touched && uploadForm.name.$invalid">
+          Name of file is required
+        </p>
+        <div class="input-group" id="inputfield-price">
+          <span class="input-group-addon"><b>Price </b></span>
+          <input type="number" name="price" ng-model="price" class="form-control" placeholder="Enter price of file*" aria-describedby="basic-addon1" required>
+          <span class="input-group-addon">$</span>
+        </div>
+        <p style="color:red; " ng-if="uploadForm.price.$touched && uploadForm.price.$invalid">
+          Price of file is required
+        </p>
+        <div class="input-group" id="inputfield-desc">
+          <span class="input-group-addon"><b>Introduction </b></span>
+          <textarea name="description" maxlength="100" ng-change="lengthOfFile(description)" ng-model="description" rows="4" aria-describedby="basic-addon1"placeholder="Enter a brief description of the file*" class="form-control" cols="50" required/>
+        </div>
+        <div>
+          <p style="color:red; display:inline-block;" ng-if="uploadForm.description.$touched && uploadForm.description.$invalid">
+            A brief Description of file is required
+          </p>
+          <p style="float:right; display:inline-block;"> {{ lengthOfTextArea }}/100</p>
+        </div>
+        <br><br>
+        <div class="input-group" id="inputfield-wierdTag">
+          <span class="input-group-addon"><b>Tag </b></span>
+          <input name="wierdTag" ng-model="wierdTag" aria-describedby="basic-addon1" placeholder="" class="form-control"/>         
+        </div>
+        <div style="margin-top:1em;" class="dropdown">
+          <select  class="form-control" name="category" ng-model="category" required>
+            <option value="" disabled selected>Choose your file type</option>
+            <optgroup label="3D model file(.fbx)">
+              <option value="1">Avatars</option>
+              <option value="2">Clothes</option>
+              <option value="3">Accessories</option>
+            </optgroup>
+            <optgroup label="Video(.mp4)">
+              <option value="4">Live 360&deg; videos</option>
+              <option value="5">360&deg; videos</option>
+              <option value="6">VR videos</option>
+            </optgroup>
+          </select>
+        </div>
+        <p style="color:red;" ng-if="uploadForm.category.$touched && uploadForm.category.$invalid">
+          File type is required
+        </p>
+        <div style="margin-top:1em;" class="dropdown" ng-show="category === '4' || category === '5' || category === '6'">
+          <select  class="form-control" name="tag" ng-model="tagOfVideo">
+            <option value="" disabled selected>Choose tag for your video</option>
+            <option value="0">Film</option>
+            <option value="1">Concerts</option>
+            <option value="2">Sports</option>
+            <option value="3">Travel</option>
+            <option value="4">Fashion</option>
+            <option value="5">Education</option>
+            <option value="6">Show</option>
+          </select>
+        </div>
+        <p style="color:red;" ng-if="(category === '4' || category === '5' || category === '6') &&  (uploadForm.tag.$touched && uploadForm.tag.$invalid)">
+          Tag is required
+        </p>
+        <div style="margin-top:1em;" class="dropdown" ng-show="tagOfVideo === '0'">
+          <select  class="form-control" name="filmTag" ng-model="tagOfFilm">
+            <option value="" disabled selected>Choose tag for your film</option>
+            <option value="0">Documentary</option>
+            <option value="1">Romance</option>
+            <option value="2">Adventure</option>
+            <option value="3">Horror</option>
+            <option value="4">Animation</option>
+            <option value="5">Comedy</option>
+          </select>
+        </div>
+        <p style="color:red;" ng-if="(category === '5' || category === '4' || category === '3') &&  (uploadForm.tag.$touched && uploadForm.tag.$invalid)">
+                   Tag is required
+        </p>
+        <div>
+          <label class="btn" for="my-file-selector" style="margin-top: 1em; background: #E8E8E8; color: black; ">
+            <input name="file" ngf-select ng-model="file" id="my-file-selector" type="button" style="display:none; background: #E8E8E8;" onchange="$('#upload-file-info').html($(this).val());" required>
+            Select file*
+          </label>
+          <label class="btn" for="my-thumbnail-selector" style="margin-top: 1em; background: #E8E8E8; color: black; ">
+            <input name="thumbnail" ngf-select ng-model="thumbnail" id="my-thumbnail-selector" type="button" style="display:none; background: #E8E8E8;" onchange="$('#upload-thumbnail-info').html($(this).val());" required>
+            Select cover*
+          </label>
+          <span class="dropdown" style="float:right; margin-top:1em; ">
+            <select class="form-control" name="privacy" ng-model="privacy" required>
+              <option value="" disabled selected><b>Select privacy*</b></option>
+              <option value="private">Private</option>
+              <option value="public">Public</option>
+            </select>
+          </span>
+        </div>
+        <div class='label label-primary' id="upload-file-info" ></div><br>
+        <div class='label label-info' id="upload-thumbnail-info" ></div>
+        <p style="color:red;" ng-if="uploadForm.file.$touched && uploadForm.file.$invalid">
+          File is required
+        </p>
+        <p style="color:red;  float:right;" ng-if="uploadForm.privacy.$touched && uploadForm.privacy.$invalid">
+          Privacy setting is required
+        </p>
+        <div style="margin-top: 3em; text-align:center;">
+          <button ng-disabled="uploadForm.$invalid || disableUploadBtn" type="submit" class="btn btn-default" style="width:12em; background: #E8E8E8; color: black;" ng-click="uploadContent()">Upload</button>
+        </div>
+      </form>
+      <div ng-if="showProgressBar" class="progress" style="margin-left:1em; margin-right:1em; margin-top:1em;">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+        </div>
+      </div>
+      <div ng-if="erroredOut" style="color:red; font-weight:bold; font-size:14px; margin-top:1em; text-align:center;">
+        Error while uploading
+      </div>
+      <div ng-if="successful" style="color:blue; font-weight:bold; font-size:14px; margin-top:1em; text-align:center;">
+        Uploaded successfully !
+      </div>
+    </div>
+  </div>
+</div>

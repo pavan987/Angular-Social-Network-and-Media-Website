@@ -1,0 +1,74 @@
+.friend-form-control {
+  display: block;
+  width: 70%;
+  height: 34px;
+  font-size: 14px;
+  line-height: 6.428571;
+  margin-left: 14%;
+}
+
+.friend-container {
+  width: 50em;
+  height: auto;
+  border: 1px solid #888888;
+  border-radius: 1px;
+  box-shadow: 10px 10px 5px #888888;
+  padding-bottom: 3em;
+  margin-top: 3em;
+}
+
+.searchitem {
+  height: 6em;
+  width: 46em;
+  margin-left: 2em;
+  display: flex;
+  display: -webkit-flex;
+  border: 1px solid black;
+}
+
+.searchDesc{
+  margin: 1px;
+}
+
+.searchDescdiv{
+  width: 15em;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.ignore{
+  margin-top: 1em;
+  margin-left: 1em;
+  width: 10em;
+  height: 2.5em;
+}
+
+
+
+
+#profile {
+  width: 6em;
+  height: 4em;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+#inputfield-username {
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-top: 2em;
+}
+
+#inputfield-email {
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-top: 1em;
+}
+
+#sign-up-div {
+  width: 10em;
+  height: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

@@ -1,0 +1,54 @@
+<div ng-controller = "HomepageCtrl" ng-init = "showVideos()" class = "container" style = "width:100%;">
+
+  <div class = "row" id="profileInfo">
+    <div class = "col-lg-2 col-sm-5"><img src = "../images/steveJobs.png" class="img-circle img-responsive" id = "displayPicture"></div>
+    <div class = "col-lg-4 col-sm-4">
+        <h3><i>{{fullname}}</i></h3>
+        <h3><i>{{username}}</i></h3>
+      <div class="navbar">
+        <div class = "row">
+          <div class="col-lg-3 col-sm-5 col-xs-2"></div>
+          <button id = "likes" class="btn btn-info" type="button" ng-click = numLikes()>
+            <i class="glyphicon glyphicon-thumbs-up"></i> Likes
+          </button>
+          <button id = "videos"  class="btn btn-info" type="button" ng-click = numVideos()>
+            <i class = "glyphicon glyphicon-expand"></i> Videos
+          </button>
+          <button id = "clothes"  class="btn btn-info" type="button" ng-click = numClothes()>
+            Clothes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-default" type="button"><a href = "#Pictures" ng-click = showClothes()>Clothes</a></button>
+    <button class="btn btn-default" type="button"><a href = "#Profile" ng-click = showProfile()>About</a></button>
+    <button class="btn btn-default" type="button"><a href = "#Video" ng-click = showVideos()>Videos</a></button>
+    <br>
+    <!-- <video width=200 height=200 ng-repeat="videoSource in videoSources track by $index" autoplay controls ng-src="{{videoSources[0] | trustUrl}}">
+    </video> -->
+  </div>
+
+  <div id = "#Pictures" style = "display:none;">
+    <img ng-src = "{{clothesSources[0]}}">
+  </div>
+
+  <div id = "#Profile" style = "display:none;">
+    {{message}}
+  </div>
+
+  <!--<div id = "#Video" style = "display:none;" >-->
+    <!--<video width=200 height=200 ng-repeat="videoSource in videoSources track by $index" autoplay controls ng-src="{{videoSources[0] | trustUrl}}">-->
+    <!--</video>-->
+  <!--</div>-->
+
+
+
+  <!-- <div style = "background-color:orange;">
+     <button id = "clothes"  class="btn btn-info" type="button" ng-click = moreVideos() style="float:right;">
+     More Videos
+     </button>
+  </div> -->
+</div>
+

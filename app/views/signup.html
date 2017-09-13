@@ -1,0 +1,42 @@
+<head>
+  <link rel="stylesheet" href="styles/signup.css">
+</head>
+
+<div class="container-fluid" ng-controller="SignupCtrl">
+  <div class="row">
+    <div class="signup-container">
+      <img src="../images/logo.png" class="img-responsive" alt="Responsive image" id="logo"/>
+      <div class="input-group" id="inputfield-username">
+        <span class="input-group-addon"><b>Firstname </b></span>
+        <input type="text" class="form-control" ng-model="firstname" placeholder="Enter your Firstname" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group" id="inputfield-username">
+        <span class="input-group-addon"><b>Lastname </b></span>
+        <input type="text" class="form-control" ng-model="lastname" placeholder="Enter your Lastname" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group" id="inputfield-username">
+        <span class="input-group-addon"><b>Username </b></span>
+        <input type="text" class="form-control" ng-model="username" placeholder="Enter your username" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group" id="inputfield-email">
+        <span class="input-group-addon"><b>E-Mail </b></span>
+        <input type="text" class="form-control" ng-model="email" placeholder="Enter your email-id" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group" id="inputfield-email">
+        <span class="input-group-addon"><b>Password </b></span>
+        <input type="password" class="form-control" ng-model="password" placeholder="Enter your password" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group" id="inputfield-email">
+        <span class="input-group-addon"><b>Confirm Password </b></span>
+        <input type="password" class="form-control" ng-model="confirmPassword" placeholder="Re-Enter your password" aria-describedby="basic-addon1">
+      </div>
+      <div>
+        <input type="checkbox" style="margin-left:10em; margin-top:1em;" ng-model="terms">&nbsp;&nbsp;&nbsp;
+        <span><b>I Agree To <a>Terms of Use</a> and <a>Privacy Policy</a></b></span>
+      </div>
+      <div style="margin-top: 2em;" id="sign-up-div">
+        <input type="button" value="Sign Up" ng-click="onSignup()" style="width: 10em; height: 2.5em;"/>
+      </div>
+    </div>
+  </div>
+</div>
