@@ -1,6 +1,12 @@
 # Angular-Social-Network-and-Media-Website
 Angular Social media website for view/upload of VR Videos streaming from AWS and social network platform to connect with friends.
 
+This is the front end repository built using Angular JS
+
+Link to Backend Repository -
+https://github.com/pavan987/Social-Media-Platform-Backend-
+
+
 All Details Below
 
 Presentation
